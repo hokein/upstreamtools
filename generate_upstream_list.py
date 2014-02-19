@@ -52,13 +52,13 @@ def get_commit_log(git_repo):
     return log
 
 chr_log = get_commit_log(config.CHROMIUM_GIT)
-blink_log = get_commit_log(config.BLINK_GIT)
-v8_log = get_commit_log(config.V8_GIT)
+#blink_log = get_commit_log(config.BLINK_GIT)
+#v8_log = get_commit_log(config.V8_GIT)
 
 log = [
     { 'name': 'Chromium', 'log': chr_log },
-    { 'name': 'Blink', 'log': blink_log },
-    { 'name': 'V8', 'log': v8_log },
+    #{ 'name': 'Blink', 'log': blink_log },
+    #{ 'name': 'V8', 'log': v8_log },
 ]
 
 env = Environment(loader=FileSystemLoader('templates'))
