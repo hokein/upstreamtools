@@ -39,7 +39,7 @@ class Repo(object):
                     'log',
                     '--format=%H%n%an%n%ad%n%ar%n%B',
                     '--date=short',
-                    '--grep=opera.com' if use_grep else '--author=opera.com',
+                    '--grep=Hokein.Wu@gmail.com' if use_grep else '--author=Hokein.Wu@gmail.com',
                     '-z',
                     'master']).split('\0')
         return lines
