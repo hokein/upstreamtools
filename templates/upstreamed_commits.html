@@ -2,7 +2,7 @@
 
 {% block content %}
 <main>
-  <h1>Opera Software upstreamed commits</h1>
+  <h1>Haojian's Chromium upstreamed commits</h1>
   <p>Upstreamed commits in
   {% for project in projects %}
     <a href="#{{ project.name|lower|e }}">{{ project.name }}</a>: {{ project.log|length }}
@@ -17,13 +17,12 @@
     <section id="{{ project.name|lower|e }}" class="{{ project.name|lower|e }}">
       <h2>{{ project.name|e }}</h2>
       <table>
-      <colgroup class=col-author>
+      <!--<colgroup class=col-author>-->
       <colgroup class=col-message>
       <colgroup class=col-when>
-      <tr><th>Author <th>Message <th>When
+      <tr><!--<th>Author--> <th>Message <th>When
       {% for c in project.log %}
         <tr>
-          <td>{{ c.author_stripped|e }}
           <td class=message>
             <details>
               <summary>{{ c.subject|e }}</summary>
