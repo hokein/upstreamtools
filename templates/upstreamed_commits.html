@@ -5,12 +5,7 @@
   <h1>Haojian's Chromium upstreamed commits</h1>
   <p>Upstreamed commits in
   {% for project in projects %}
-    <a href="#{{ project.name|lower|e }}">{{ project.name }}</a>: {{ project.log|length }}
-    {% if project != projects[-1] %}
-      ,
-    {% else %}
-      .
-    {% endif %}
+    <a href="#{{ project.name|lower|e }}">{{ project.name }}</a>: {{ project.log|length }}{% if project != projects[-1] %}, {% else %}.{% endif %}
   {% endfor %}
   <p class=hint>Click message to expand
   {% for project in projects %}
